@@ -1,0 +1,15 @@
+{
+  "name": "learnwebpack",
+  "version": "0.0.1",
+  "description": "first try using webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "elitefan",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
