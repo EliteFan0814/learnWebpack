@@ -13,6 +13,7 @@ module.exports = {
     },
     module: {
         rules: [
+            // 图片打包工具
             {
                 test: /\.(png|jpg|gif)$/,
                 use: {
@@ -29,7 +30,22 @@ module.exports = {
                         limit: 2048
                     }
                 }
-            }
+            },
+            // css打包工具
+            {
+                test: /\.scss$/,
+                use: ['style-loader', // 将 JS 字符串生成为 style 节点
+                    {
+                        loader: 'css-loader', // 将 CSS 转化成 CommonJS 模块
+                        options: {
+                            importLoaders: 2,
+                            modules:true 
+                        }
+                    },
+                    'postcss-loader', // 添加前缀
+                    'sass-loader', // 将 Sass 编译成 CSS，默认使用 Node Sass
+                ],
+            },
         ]
     },
 
