@@ -31,6 +31,13 @@ module.exports = {
                     }
                 }
             },
+            // 字体文件打包工具
+            {
+                test: /\.(eot|woff|ttf|svg)$/,
+                use: {
+                    loader: 'file-loader'
+                }
+            },
             // css打包工具
             {
                 test: /\.scss$/,
@@ -39,7 +46,7 @@ module.exports = {
                         loader: 'css-loader', // 将 CSS 转化成 CommonJS 模块
                         options: {
                             importLoaders: 2,
-                            modules:true 
+                            //modules: true, // 模块化 css 
                         }
                     },
                     'postcss-loader', // 添加前缀
