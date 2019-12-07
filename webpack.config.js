@@ -12,6 +12,11 @@ module.exports = {
     // 开发环境下建议配置为：cheap-module-eval-source-map
     // 生产环境一般不用，用的话建议：cheap-moudle-source-map
     devtool: 'cheap-module-eval-source-map',
+    // devServer 开启一个本地服务器方便调试
+    devServer:{
+        contentBase:'./dist', // 设置服务器根路径
+        open:true
+    },
     // entry: './src/index.js', 此句等价于下面
     entry: {
         main: './src/index.js',
