@@ -1,15 +1,26 @@
 // 引入 nodojs 的核心模块
 const path = require('path')
-
+// 引入 htmlwebpackplugin
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+// 引入 cleanWebpackPlugin
+const {
+    CleanWebpackPlugin
+} = require("clean-webpack-plugin")
 module.exports = {
-    mode: 'development',
+    mode: 'development', // 当前为开发者模式，默认 souce-map 已经被配置
+    // devtool 用来配置 sourceMap，映射dist目录下和开发环境下实际对应的代码，便于找出代码错误位置
+    // 开发环境下建议配置为：cheap-module-eval-source-map
+    // 生产环境一般不用，用的话建议：cheap-moudle-source-map
+    devtool: 'cheap-module-eval-source-map',
     // entry: './src/index.js', 此句等价于下面
     entry: {
-        main: './src/index.js'
+        main: './src/index.js',
+        main2: './src/index2.js'
     },
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        filename: '[name].js',
+        path: path.resolve(__dirname, 'dist'), // 出口目录
+        //publicpath:'https://www.fpc.com/' // 增加public路径
     },
     module: {
         rules: [
@@ -55,5 +66,7 @@ module.exports = {
             },
         ]
     },
-
+    plugins: [new HtmlWebpackPlugin({
+        template: 'src/index.html'
+    }), new CleanWebpackPlugin()]
 }
