@@ -6,6 +6,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {
     CleanWebpackPlugin
 } = require("clean-webpack-plugin")
+// 引入 webpack
+const webpack = require('webpack')
+
 module.exports = {
     mode: 'development', // 当前为开发者模式，默认 souce-map 已经被配置
     // devtool 用来配置 sourceMap，映射dist目录下和开发环境下实际对应的代码，便于找出代码错误位置
@@ -13,9 +16,15 @@ module.exports = {
     // 生产环境一般不用，用的话建议：cheap-moudle-source-map
     devtool: 'cheap-module-eval-source-map',
     // devServer 开启一个本地服务器方便调试
-    devServer:{
-        contentBase:'./dist', // 设置服务器根路径
-        open:true
+    devServer: {
+        contentBase: './dist', // 设置服务器根路径
+        open: true,
+        hot: true, // 开启热重载
+        hotOnly: true, // 即使hot没生效，也不让浏览器重新刷新
+        // 代理配置
+        // proxy:{
+        //     '/api':'http://localhost:3000'
+        // }
     },
     // entry: './src/index.js', 此句等价于下面
     entry: {
@@ -54,7 +63,7 @@ module.exports = {
                     loader: 'file-loader'
                 }
             },
-            // css打包工具
+            // scss打包工具
             {
                 test: /\.scss$/,
                 use: ['style-loader', // 将 JS 字符串生成为 style 节点
@@ -69,9 +78,23 @@ module.exports = {
                     'sass-loader', // 将 Sass 编译成 CSS，默认使用 Node Sass
                 ],
             },
+            // css打包工具
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1,
+                        }
+                    },
+                    'postcss-loader'
+                ]
+            }
         ]
     },
     plugins: [new HtmlWebpackPlugin({
         template: 'src/index.html'
-    }), new CleanWebpackPlugin()]
+    }), new CleanWebpackPlugin(), new webpack.HotModuleReplacementPlugin()]
 }
