@@ -37,12 +37,14 @@
   content: "\e902";
 }
 
-
-
-
-
 body {
   #root {
     background: #ddd;
+  }
+  .my-border{
+    width: 200px;
+    height: 200px;
+    box-shadow: 2px 2px red;
+    transition: all 0.3s;
   }
 }

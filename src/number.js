@@ -1,7 +1,7 @@
 function number() {
   var div = document.createElement('div')
   div.setAttribute('id', 'number')
-  div.innerHTML = 5000
+  div.innerHTML = 3000
   // div.onclick = function () {
   //   div.innerHTML = parseInt(div.innerHTML) + 1
   // }

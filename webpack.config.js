@@ -8,6 +8,8 @@ const {
 } = require("clean-webpack-plugin")
 // 引入 webpack
 const webpack = require('webpack')
+// 引入 copyWebpackPlugin
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     mode: 'development', // 当前为开发者模式，默认 souce-map 已经被配置
@@ -94,7 +96,15 @@ module.exports = {
             }
         ]
     },
-    plugins: [new HtmlWebpackPlugin({
-        template: 'src/index.html'
-    }), new CleanWebpackPlugin(), new webpack.HotModuleReplacementPlugin()]
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: 'src/index.html'
+        }),
+        new CleanWebpackPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        new CopyPlugin([{
+            from: 'src/font',
+            to: 'font'
+        }])
+    ]
 }
