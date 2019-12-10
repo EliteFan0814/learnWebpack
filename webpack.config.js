@@ -31,7 +31,9 @@ module.exports = {
     // entry: './src/index.js', 此句等价于下面
     entry: {
         main: './src/index.js',
-        main2: './src/index2.js'
+        main2: './src/index2.js',
+        // main: ['@babel/polyfill', './src/index.js'],
+        // main2: ['@babel/polyfill', './src/index2.js']
     },
     output: {
         filename: '[name].js',
@@ -97,13 +99,13 @@ module.exports = {
             // 使用babel进行 js 转义
             {
                 test: /\.js$/,
-                exclude: '/node_modules/',
+                exclude: /node_modules/,
                 loader: 'babel-loader',
                 options: {
                     presets: [
                         ['@babel/preset-env', {
-                            useBuiltIns: 'entry',
-                            corejs: 3
+                            useBuiltIns: 'usage',
+                            corejs:3
                         }]
                     ]
                 }

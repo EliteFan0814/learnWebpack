@@ -1,3 +1,7 @@
+//import "@babel/polyfill"; // 必须放在入口文件首行
+// import "core-js/stable";
+// import "regenerator-runtime/runtime";
+
 // ES module 语法引入模块 
 import Header from './header.js'
 import Sidebar from './sidebar.js'
@@ -11,8 +15,8 @@ import counter from './counter.js'
 
 import createImg from './createImg.js'
 
-import "core-js/stable";
-import "regenerator-runtime/runtime";
+// import "core-js/stable";
+// import "regenerator-runtime/runtime";
 // 另外还有 CommonJS 模块引入规范 CMD AMD等模块引入规范
 // CommonJS规范
 // let Header = require('./header')
