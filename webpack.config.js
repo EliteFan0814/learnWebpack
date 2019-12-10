@@ -93,6 +93,20 @@ module.exports = {
                     },
                     'postcss-loader'
                 ]
+            },
+            // 使用babel进行 js 转义
+            {
+                test: /\.js$/,
+                exclude: '/node_modules/',
+                loader: 'babel-loader',
+                options: {
+                    presets: [
+                        ['@babel/preset-env', {
+                            useBuiltIns: 'entry',
+                            corejs: 3
+                        }]
+                    ]
+                }
             }
         ]
     },

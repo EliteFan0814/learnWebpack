@@ -10,6 +10,9 @@ import number from './number.js'
 import counter from './counter.js'
 
 import createImg from './createImg.js'
+
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 // 另外还有 CommonJS 模块引入规范 CMD AMD等模块引入规范
 // CommonJS规范
 // let Header = require('./header')
