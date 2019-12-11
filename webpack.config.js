@@ -122,5 +122,8 @@ module.exports = {
             from: 'src/font',
             to: 'font'
         }])
-    ]
+    ],
+    optimization:{
+        usedExports: true
+    }
 }
