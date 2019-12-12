@@ -105,7 +105,7 @@ module.exports = {
                     presets: [
                         ['@babel/preset-env', {
                             useBuiltIns: 'usage',
-                            corejs:3
+                            corejs: 3
                         }]
                     ]
                 }
@@ -123,7 +123,7 @@ module.exports = {
             to: 'font'
         }])
     ],
-    optimization:{
+    optimization: {
         usedExports: true
     }
 }
