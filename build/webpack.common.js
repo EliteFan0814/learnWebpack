@@ -85,6 +85,9 @@ module.exports = {
     }])
   ],
   optimization: {
+    // 代码分割，和webpack无关
+    // 同步代码：只需要在webpack.common.js中做optimization的配置
+    //异步代码：不需要做任何配置
     splitChunks: {
       chunks: 'async',
       minSize: 30000,

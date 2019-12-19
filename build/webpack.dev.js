@@ -14,7 +14,8 @@ const devConfig = {
         new webpack.HotModuleReplacementPlugin(),
     ],
     optimization: {
-        usedExports: true
+        // 开发环境使用 tree shaking 按需加载需要的函数
+        usedExports: true,
     }
 }
 
