@@ -4,7 +4,8 @@
   "description": "learn webpack",
   "private": true,
   "sideEffects": [
-    "*.css", "*.scss"
+    "*.css",
+    "*.scss"
   ],
   "scripts": {
     "bundle": "webpack",
