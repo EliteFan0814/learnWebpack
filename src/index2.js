@@ -37,3 +37,5 @@ document.addEventListener('click', () => {
     document.body.appendChild(rel)
   })
 })
+
+console.log('module',module)
