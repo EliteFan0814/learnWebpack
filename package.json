@@ -10,7 +10,7 @@
   "scripts": {
     "bundle": "webpack",
     "serve": "webpack-dev-server",
-    "dev": "webpack-dev-server --config ./build/webpack.dev.js",
+    "dev": "webpack-dev-server --profile --json > stats.json --config ./build/webpack.dev.js",
     "build": "webpack --config ./build/webpack.prod.js"
   },
   "repository": {
@@ -37,7 +37,9 @@
     "css-loader": "^3.2.0",
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.1",
@@ -49,6 +51,7 @@
   },
   "dependencies": {
     "core-js": "^3.4.8",
+    "jquery": "^3.4.1",
     "lodash": "^4.17.15"
   }
 }

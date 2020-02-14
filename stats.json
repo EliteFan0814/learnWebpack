@@ -1,0 +1,67 @@
+[34mi[39m [90m｢wds｣[39m: Project is running at http://localhost:8080/
+[34mi[39m [90m｢wds｣[39m: webpack output is served from /
+[34mi[39m [90m｢wds｣[39m: Content not from webpack is served from ./src
+[34mi[39m [90m｢wdm｣[39m: wait until bundle finished: /
+[34mi[39m [90m｢wdm｣[39m: Hash: b1d9bcaefc8b4a3f6fa2
+Version: webpack 4.41.2
+Time: 5011ms
+Built at: 2020-02-12 15:18:00
+                                          Asset       Size            Chunks             Chunk Names
+           01cbdca9ed2af447f7c4c99ca74ff764.ttf   2.36 KiB                    [emitted]  
+          0cfc89b5e01127149c4a1bf35ed3f6f9.woff   1.61 KiB                    [emitted]  
+           6573b91d0b0795ad63671e3cc21a9f16.svg   3.61 KiB                    [emitted]  
+           e66a1926ed93b077e3b70fd2b8ac3207.eot   2.52 KiB                    [emitted]  
+                              font/iconfont.eot   2.52 KiB                    [emitted]  
+                              font/iconfont.svg   3.61 KiB                    [emitted]  
+                              font/iconfont.ttf   2.36 KiB                    [emitted]  
+                             font/iconfont.woff   1.61 KiB                    [emitted]  
+images/pic_e4c3e033c0fa7c4dd2799cbc1d48205b.png   1.17 MiB                    [emitted]  
+                                     index.html  492 bytes                    [emitted]  
+                                        main.js   1.07 MiB              main  [emitted]  main
+                                       main2.js   1.89 MiB             main2  [emitted]  main2
+                      vendors~myLodash.chunk.js   1.35 MiB  vendors~myLodash  [emitted]  vendors~myLodash
+Entrypoint main = main.js
+Entrypoint main2 = main2.js
+[0] multi (webpack)-dev-server/client?http://localhost:8080 (webpack)/hot/dev-server.js ./src/index.js 52 bytes {main} [built]
+    factory:1ms building:1ms dependencies:361ms = 363ms
+[1] multi (webpack)-dev-server/client?http://localhost:8080 (webpack)/hot/dev-server.js ./src/index2.js 52 bytes {main2} [built]
+    factory:0ms building:0ms dependencies:361ms = 361ms
+[./node_modules/core-js/modules/es.array.join.js] 678 bytes {main2} [built]
+    [./src/index2.js] 1542ms -> factory:265ms building:2246ms dependencies:165ms = 4218ms
+[./node_modules/core-js/modules/es.object.to-string.js] 387 bytes {main2} [built]
+    [./src/index2.js] 1542ms -> factory:265ms building:2246ms dependencies:165ms = 4218ms
+[./node_modules/core-js/modules/es.promise.js] 13.3 KiB {main2} [built]
+    [./src/index2.js] 1542ms -> factory:265ms building:2246ms dependencies:165ms = 4218ms
+[./node_modules/lodash/lodash.js] 528 KiB {vendors~myLodash} [built]
+    [./src/index2.js] 1542ms -> factory:265ms building:2246ms dependencies:165ms = 4218ms
+[./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] (webpack)-dev-server/client?http://localhost:8080 4.29 KiB {main} {main2} [built]
+    [0] 2ms -> factory:361ms building:81ms = 444ms
+[./node_modules/webpack-dev-server/client/overlay.js] (webpack)-dev-server/client/overlay.js 3.51 KiB {main} {main2} [built]
+    [0] 2ms -> [./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] 442ms -> factory:1594ms building:571ms dependencies:220ms = 2829ms
+[./node_modules/webpack-dev-server/client/socket.js] (webpack)-dev-server/client/socket.js 1.53 KiB {main} {main2} [built]
+    [0] 2ms -> [./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] 442ms -> factory:1594ms building:571ms dependencies:220ms = 2829ms
+[./node_modules/webpack-dev-server/client/utils/createSocketUrl.js] (webpack)-dev-server/client/utils/createSocketUrl.js 2.89 KiB {main} {main2} [built]
+    [0] 2ms -> [./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] 442ms -> factory:1594ms building:571ms dependencies:220ms = 2829ms
+[./node_modules/webpack-dev-server/client/utils/log.js] (webpack)-dev-server/client/utils/log.js 964 bytes {main} {main2} [built]
+    [0] 2ms -> [./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] 442ms -> factory:1594ms building:571ms dependencies:220ms = 2829ms
+[./node_modules/webpack-dev-server/client/utils/reloadApp.js] (webpack)-dev-server/client/utils/reloadApp.js 1.59 KiB {main} {main2} [built]
+    [0] 2ms -> [./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] 442ms -> factory:1594ms building:571ms dependencies:220ms = 2829ms
+[./node_modules/webpack/hot/dev-server.js] (webpack)/hot/dev-server.js 1.59 KiB {main} {main2} [built]
+    [0] 2ms -> factory:361ms building:81ms = 444ms
+[./src/index.js] 1.57 KiB {main} [built]
+    factory:246ms building:1229ms dependencies:288ms = 1763ms
+[./src/index2.js] 1.18 KiB {main2} [built]
+    factory:364ms building:1178ms dependencies:119ms = 1661ms
+    + 126 hidden modules
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+    [./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html] 613 bytes {0} [built]
+        factory:139ms building:50ms = 189ms
+    [./node_modules/lodash/lodash.js] 528 KiB {0} [built]
+        [./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html] 189ms -> factory:66ms building:3646ms = 3901ms
+    [./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {0} [built]
+        [./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html] 189ms -> [./node_modules/lodash/lodash.js] 3712ms -> factory:133ms building:1ms = 4035ms
+    [./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 497 bytes {0} [built]
+        [./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html] 189ms -> [./node_modules/lodash/lodash.js] 3712ms -> factory:133ms building:1ms = 4035ms
+[34mi[39m [90m｢wdm｣[39m: Compiled successfully.

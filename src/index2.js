@@ -4,6 +4,7 @@ import {
   a
 } from './testMethods.js'
 
+import ui from './testShimming' 
 // 同步加载 lodash
 // import _ from 'lodash'
 // let element = document.createElement('div')
@@ -11,7 +12,7 @@ import {
 // document.body.appendChild(element)
 
 a()
-
+ui()
 // 异步加载 lodash
 function getComponent() {
   return import( /* webpackChunkName:"myLodash" */ 'lodash').then(({
